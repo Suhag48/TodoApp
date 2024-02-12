@@ -21,6 +21,13 @@ const Todo = () => {
     todo.unshift(TodoItem)
     setAllTodos(todo)
   }
+
+  // deleting todo
+  const handleDeleteTodo = (index) => {
+    let deleteTodo = [...allTodos]
+    deleteTodo.splice(index, 1)
+    setAllTodos(deleteTodo)
+  }
   return (
     <div className="todo-wrapper">
       <div className="todo">
@@ -50,7 +57,7 @@ const Todo = () => {
                 <div className="task-modify-btn">
                   <IoMdCheckmarkCircleOutline size={20} />
                   <CiEdit size={20} />
-                  <MdDelete size={20} />
+                  <MdDelete size={20} onClick={()=>handleDeleteTodo(index)}/>
                 </div>
               </li>
             )

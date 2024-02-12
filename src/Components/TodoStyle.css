@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --white: #fafafa;
+  --black: #000;
+  --gray: #eee;
+  --green: green;
+}
+.todo-wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.todo{
+  background-color: var(--gray);
+  padding: 40px;
+}
+.todo h2{
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+.todo hr{
+  height: 1px;
+  width: 35%;
+  margin: 0 auto;
+  background: var(--black);
+  margin-top: 15px;
+}
+form{
+  display: flex;
+  column-gap: 1.5rem;
+  margin: 60px 0;
+}
+.input-field{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+}
+.input-field label{
+  font-size: 20px;
+  font-weight: 600;
+}
+.input-field input{
+  padding: 5px 3px;
+}
+.input-field input:focus{
+  outline-color: var(--green);
+}
+.add-btn{
+  margin-top: 30px;
+}
+.add-btn button{
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.task li{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  background-color: bisque;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.task-name h3{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.task-modify-btn{
+  display: flex;
+  column-gap: 10px;
+}
+
+/* responsive code start */
+@media only screen and (max-width: 550px) {
+  .todo{
+    min-width: 90%;
+  }
+  form{
+    flex-direction: column;
+    row-gap: 25px;
+  }
+  .input-field{
+    row-gap: 0;
+  }
+  .input-field label{
+    margin-bottom: 10px;
+  }
+  .add-btn{
+    margin-top: 10px;
+  }
+}
